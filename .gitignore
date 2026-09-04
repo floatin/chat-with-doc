@@ -7,3 +7,8 @@ dist-tests/
 .memsearch/
 .env
 .env.local
+
+# TypeScript / esbuild cache directories (transient)
+var/
+.tsbuildinfo
+*.tsbuildinfo
