@@ -1,0 +1,17 @@
+{
+  "name": "chat-with-doc",
+  "version": "0.1.0",
+  "description": "chat-with-doc: 文档驱动的 AI Coding 协作, 基于渐进式披露的 markdown 工程最佳实践 + worktree 隔离",
+  "entry": "dist/extension.js",
+  "commands": ["doc"],
+  "tools": ["doc_new", "doc_sync"],
+  "skills": [
+    "mode-discuss",
+    "mode-design",
+    "mode-experiment",
+    "mode-produce",
+    "mode-maintain",
+    "doc-sync"
+  ],
+  "agents": ["AGENTS.md"]
+}

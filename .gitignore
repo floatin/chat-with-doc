@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-tests/
+*.log
+.DS_Store
+
+# Tool local state (memsearch index, etc.)
+.memsearch/
+.env
+.env.local

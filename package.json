@@ -1,0 +1,48 @@
+{
+  "name": "chat-with-doc",
+  "version": "0.1.0",
+  "description": "Pi Agent extension + CLI for the 'chat with doc' workflow: markdown as engineering artifact with progressive disclosure, backed by git worktree isolation.",
+  "type": "module",
+  "main": "dist/extension.js",
+  "bin": {
+    "cwd": "./bin/cwd.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "node --test --import tsx --test-reporter=spec \"tests/**/*.test.ts\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "validate:docs": "node bin/cwd.js validate",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "pi-package",
+    "pi",
+    "agent",
+    "extension",
+    "worktree",
+    "markdown"
+  ],
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "bin/",
+    "skills/",
+    "settings.json",
+    "AGENTS.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": ["./dist/extension.js"],
+    "skills": ["./skills"]
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "tsx": "^4.7.0",
+    "@types/node": "^20.0.0"
+  }
+}
