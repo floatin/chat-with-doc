@@ -13,7 +13,6 @@
     "test": "node --test --import tsx --test-reporter=spec \"tests/**/*.test.ts\"",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.test.json --noEmit",
     "validate:docs": "node bin/cwd.js validate",
-    "postinstall": "npm run build",
     "prepublishOnly": "npm run build && npm test"
   },
   "keywords": [
